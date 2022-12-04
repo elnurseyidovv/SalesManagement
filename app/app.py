@@ -101,5 +101,175 @@ def add_purchase():
     return {'message': 'Success'}
 
 
+@app.route('/updateCategory', methods=['POST'])
+def update_category():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/updateClient', methods=['POST'])
+def update_client():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/updateProduct', methods=['POST'])
+def update_product():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/updateInterest', methods=['POST'])
+def update_interest():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/updatePurchase', methods=['POST'])
+def update_purchase():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/getCategory', methods=['POST'])
+def get_category():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("select * from CATEGORY")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/getClient', methods=['POST'])
+def get_client():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("select * from CLIENT")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/getProduct', methods=['POST'])
+def get_product():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("select * from PRODUCT")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/getInterest', methods=['POST'])
+def get_interest():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("select * from INTEREST")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
+@app.route('/getPurchase', methods=['POST'])
+def get_purchase():
+    data = request.get_json()
+
+    try:
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        cursor.execute("select * from PURCHASE")
+        cursor.close()
+        connection.close()
+    except Exception as error:
+        print(error)
+        return {'message': 'DB error'}
+
+    return {'message': 'Success'}
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
