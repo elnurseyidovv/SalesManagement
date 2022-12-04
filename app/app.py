@@ -31,7 +31,7 @@ def add_category():
 
 
 @app.route('/addClient', methods=['POST'])
-def add_category():
+def add_client():
     data = request.get_json()
 
     try:
@@ -48,7 +48,7 @@ def add_category():
 
 
 @app.route('/addProduct', methods=['POST'])
-def add_category():
+def add_product():
     data = request.get_json()
 
     try:
@@ -66,7 +66,7 @@ def add_category():
 
 
 @app.route('/addInterest', methods=['POST'])
-def add_category():
+def add_interest():
     data = request.get_json()
 
     try:
@@ -84,7 +84,7 @@ def add_category():
 
 
 @app.route('/addPurchase', methods=['POST'])
-def add_category():
+def add_purchase():
     data = request.get_json()
 
     try:
