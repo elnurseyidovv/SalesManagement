@@ -6,12 +6,14 @@ services:
       - db
     ports:
       - "5000:5000"
+    network_mode: "bridge"
 
   db:
     image: mysql:5.7
     ports:
-      - "32000:3306"
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
+    network_mode: "bridge"
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro

@@ -186,7 +186,7 @@ def update_purchase():
     return {'message': 'Success'}
 
 
-@app.route('/getCategory', methods=['POST'])
+@app.route('/getCategory', methods=['GET'])
 def get_category():
     data = request.get_json()
 
@@ -203,7 +203,7 @@ def get_category():
     return {'message': 'Success'}
 
 
-@app.route('/getClient', methods=['POST'])
+@app.route('/getClient', methods=['GET'])
 def get_client():
     data = request.get_json()
 
@@ -220,7 +220,7 @@ def get_client():
     return {'message': 'Success'}
 
 
-@app.route('/getProduct', methods=['POST'])
+@app.route('/getProduct', methods=['GET'])
 def get_product():
     data = request.get_json()
 
@@ -237,7 +237,7 @@ def get_product():
     return {'message': 'Success'}
 
 
-@app.route('/getInterest', methods=['POST'])
+@app.route('/getInterest', methods=['GET'])
 def get_interest():
     data = request.get_json()
 
@@ -254,7 +254,7 @@ def get_interest():
     return {'message': 'Success'}
 
 
-@app.route('/getPurchase', methods=['POST'])
+@app.route('/getPurchase', methods=['GET'])
 def get_purchase():
     data = request.get_json()
 
